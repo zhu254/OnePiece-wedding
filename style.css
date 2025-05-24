@@ -47,7 +47,7 @@ body {
 
 .hero a {
     color: var(--pink);
-    background-color: white;
+    background-color: black;
     box-shadow: var(--shadow);
 }
 
