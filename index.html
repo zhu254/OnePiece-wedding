@@ -412,17 +412,19 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
+            color: black; /* Semua teks di body berwarna hitam */
         }
         .bank-info {
             background-color: #f5f5f5;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 20px;
+            color: black; /* Teks dalam bank-info hitam */
         }
         .copy-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            background-color: #f5f5f5;
+            color: black; /* Teks tombol hitam */
+            border: 1px solid black; /* Border hitam */
             padding: 8px 15px;
             text-align: center;
             text-decoration: none;
@@ -433,12 +435,16 @@
             border-radius: 4px;
         }
         .copy-btn:hover {
-            background-color: #45a049;
+            background-color: #e0e0e0;
         }
         .success-msg {
-            color: green;
+            color: black; /* Pesan sukses hitam */
             display: none;
             margin-left: 10px;
+            font-weight: bold;
+        }
+        h2, h3, strong {
+            color: black; /* Memastikan semua heading dan teks strong hitam */
         }
     </style>
 </head>
@@ -446,7 +452,7 @@
        
     <div class="bank-info">
         <h3>Bank BCA</h3>
-        <p>Nomor Rekening: <span id="accountNumber">586-0633525</span></p>
+        <p>Nomor Rekening: <span id="accountNumber">5860633525</span></p>
         <p>Atas Nama: <strong>Chrisyantono Halim</strong></p>
         <button class="copy-btn" onclick="copyToClipboard('accountNumber')">Salin Nomor Rekening</button>
         <span id="successMsg" class="success-msg">Tersalin!</span>
