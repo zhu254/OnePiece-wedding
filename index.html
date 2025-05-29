@@ -399,16 +399,80 @@
             <p>Bagi yang ingin memberikan tanda kasih, dapat mengirimkan melalui fitur di bawah ini:</p>
           </div>
         </div>
-
-
-        <div class="row justify-content-center text-center">
-          <div class="col-md-6">
-            <ul class="list-group">
-
-              <li class="list-group-item">
-                <div class="fw-bold">BCA</div>
-                586-063-3525 - Chrisyantono Halim
-              </li>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Transfer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .bank-info {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .success-msg {
+            color: green;
+            display: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+       
+    <div class="bank-info">
+        <h3>Bank BCA</h3>
+        <p>Nomor Rekening: <span id="accountNumber">586-0633525</span></p>
+        <p>Atas Nama: <strong>Chrisyantono Halim</strong></p>
+        <button class="copy-btn" onclick="copyToClipboard('accountNumber')">Salin Nomor Rekening</button>
+        <span id="successMsg" class="success-msg">Tersalin!</span>
+    </div>
+    <script>
+        function copyToClipboard(id) {
+            const element = document.getElementById(id);
+            const text = element.innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                // Show success message
+                const successMsg = id === 'accountNumber' 
+                    ? document.getElementById('successMsg') 
+                    : document.getElementById('successMsg2');
+                
+                successMsg.style.display = 'inline';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('Gagal menyalin: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
 
 <h2 class="elementor-heading-title elementor-size-default"><p>* Pastikan nama dan nomor rekening sudah sesuai dengan nama mempelai ketika melakukan proses transfer.<br>
 * Mohon untuk melakukan konfirmasi hadiah anda dengan mengirim bukti transfer/ resi pengiriman kepada mempelai melalui personal message. Terima kasih.</p>
