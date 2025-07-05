@@ -141,7 +141,8 @@ body {
 }
 
 .info {
-    background-image: url(img/gallery/_34A3423.jpg);
+    background-image: url(img/gallery
+/thumbnail/cccc.jpg);
     color: white;
     padding-top: 10rem;
     padding-bottom: 8rem;
